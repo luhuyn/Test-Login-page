@@ -5,9 +5,129 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(/src/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.flex{
+  display:flex;
+}
+.w-full{
+  width:100%;
+}
+.w-1\/3{
+  width: 33.33333%;
+}
+.h-full{
+  height:100%;
+}
+.justify-end{
+  justify-content: flex-end;
+}
+
+/* title */
+.login-title{
+  text-transform: uppercase;
+  margin-bottom: 40px!important;
+  position:relative;
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #93bee6, #4286c3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.login-title::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #4286c3;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/* form */
+.login-wrapper{
+  padding-right: 15vw;
+  padding-top: 20vh;
+  height:100vh;
+}
+.ant-form-item-label > label {
+  font-size: 16px !important;
+}
+
+.ant-input {
+  border-radius: 18px;
+  line-height: 1.75;
+  font-size: 15px;
+}
+.ant-input-password{
+  border-radius: 18px;
+  line-height: 1.75;
+  font-size: 15px;
+}
+.ant-btn{
+  border-radius: 18px;
+  height: 48px;
+  font-size: 16px;
+}
+/* responsive */
+/* @media (max-width: 768px) { 
+  .login-wrapper {
+    justify-content: center;
+  }
+  .w-1\/3 {
+    width: 100%;
+  }
+} */
+/* Media queries */
+@media (max-width: 768px) {
+  /* Reduce font size of login title */
+  body {
+    background-size: contain;
+  }
+  .login-title {
+    font-size: 24px;
+  }
+
+  /* Make login form full width */
+  .w-1\/3 {
+    width: 100%;
+  }
+
+  /* Reduce padding of login wrapper */
+  .login-wrapper {
+    padding-right: 0;
+    padding-top: 10vh;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Reduce font size of login title further */
+  .login-title {
+    font-size: 20px;
+  }
+
+  /* Add more padding to login wrapper */
+  .login-wrapper {
+    padding-top: 20vh;
+  }
+}
+
+
+
+
+
+
+
+
+
+
