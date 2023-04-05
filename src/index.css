@@ -31,7 +31,7 @@ code {
 }
 
 /* title */
-.login-title{
+.login-title, .forgot-password-title{
   text-transform: uppercase;
   margin-bottom: 40px!important;
   position:relative;
@@ -43,7 +43,7 @@ code {
   display: inline-block;
 }
 
-.login-title::before {
+.login-title::before, .forgot-password-title::before{
   content: '';
   position: absolute;
   bottom: -20px;
@@ -55,7 +55,7 @@ code {
 }
 
 /* form */
-.login-wrapper{
+.login-wrapper, .forgot-password-wrapper {
   padding-right: 15vw;
   padding-top: 20vh;
   height:100vh;
@@ -66,7 +66,7 @@ code {
 
 .ant-input {
   border-radius: 18px;
-  line-height: 1.75;
+  line-height: 2;
   font-size: 15px;
 }
 .ant-input-password{
@@ -79,22 +79,33 @@ code {
   height: 48px;
   font-size: 16px;
 }
-/* responsive */
-/* @media (max-width: 768px) { 
-  .login-wrapper {
-    justify-content: center;
-  }
-  .w-1\/3 {
-    width: 100%;
-  }
-} */
+.receive-otp-button, .verify-button{
+  height: 2.25rem;
+  width: 10rem;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+.back-to-login-link {
+  display: block;
+  margin-top: 10px;
+  color: #4286c3;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+.back-to-login-link:hover {
+  text-decoration: underline;
+}
+
 /* Media queries */
 @media (max-width: 768px) {
   /* Reduce font size of login title */
   body {
     background-size: contain;
   }
-  .login-title {
+  .login-title, .forgot-password-title {
     font-size: 24px;
   }
 
@@ -104,7 +115,7 @@ code {
   }
 
   /* Reduce padding of login wrapper */
-  .login-wrapper {
+  .login-wrapper, .forgot-password-wrapper {
     padding-right: 0;
     padding-top: 10vh;
   }
@@ -112,12 +123,12 @@ code {
 
 @media (max-width: 576px) {
   /* Reduce font size of login title further */
-  .login-title {
+  .login-title, .forgot-password-title{
     font-size: 20px;
   }
 
   /* Add more padding to login wrapper */
-  .login-wrapper {
+  .login-wrapper, .forgot-password-wrapper {
     padding-top: 20vh;
   }
 }

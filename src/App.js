@@ -1,8 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { useState } from 'react';
+// import ReactDOM from 'react-dom';
+import React, { useState } from 'react';
 import './App.css';
 import { Form, Input, Button } from 'antd';
+import { Link } from 'react-router-dom';
+import './index.css';
+// import ForgotPassword from './forgot-password';
 
 const LoginForm = () => {
   const [form] = Form.useForm();
@@ -38,7 +40,6 @@ const LoginForm = () => {
                 labelCol={{ span: 24 }}
                 wrapperCol={{ span: 24 }}
                 rules={[{ required: true, message: 'Please input your username!' }]}
-                className="custom-label"
               >
                 <Input />
               </Form.Item>
@@ -49,13 +50,12 @@ const LoginForm = () => {
                 labelCol={{ span: 24 }}
                 wrapperCol={{ span: 24 }}
                 rules={[{ required: true, message: 'Please input your password!' }]}
-                className="custom-label"
               >
                 <Input.Password />
               </Form.Item>
 
               <Form.Item>
-                <a href=""><span>Forgot Password?</span></a>
+                <Link to = "/forgot-password"><span>Forgot Password?</span></Link>
               </Form.Item>
 
               <Form.Item>
@@ -73,9 +73,9 @@ const LoginForm = () => {
 
 export default LoginForm;
 
-ReactDOM.render(
-  <React.StrictMode>
-    <LoginForm />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <LoginForm />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
