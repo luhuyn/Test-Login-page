@@ -46,8 +46,11 @@ const ForgotPasswordForm = () => {
     setIsVerifyDisabled(!isFormValid || !isEmailValid || !isOtpValid);
   };
   const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-    setIsEmailValid(!!event.target.value);
+    const email = event.target.value;
+    const emailRegex = /^\S+@\S+\.\S+$/; // Regular expression for email format
+    setEmail(email);
+    setIsEmailValid(emailRegex.test(email));
+    setIsReceiveOtpDisabled(!emailRegex.test(email));
   };
   const handleReceiveOtpClick = () => {
     // Send a request to the server to send the OTP to the user's email
