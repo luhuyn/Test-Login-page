@@ -79,6 +79,9 @@ code {
   height: 48px;
   font-size: 16px;
 }
+/* .forgot-password-cover{
+  background-image: url(/src/forgot-pwd.jpeg);
+} */
 .receive-otp-button, .verify-button{
   height: 2.25rem;
   width: 10rem;

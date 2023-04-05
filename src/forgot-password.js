@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import './App.css';
 import { Form, Input, Button } from 'antd';
 import { Link } from 'react-router-dom';
 import './index.css';
 import { ArrowLeftOutlined } from '@ant-design/icons';
-
+import { message } from 'antd';
 
 const ForgotPasswordForm = () => {
   const [form] = Form.useForm();
@@ -34,7 +34,7 @@ const ForgotPasswordForm = () => {
     .catch(error => {
       console.error(error);
       // Display an error message to the user
-      alert('Invalid email or OTP');
+      message.error('Invalid email or OTP');
     });
   };
 
@@ -67,8 +67,8 @@ const ForgotPasswordForm = () => {
       })
       .catch(error => {
         console.error(error);
-        // Display an error message to the user
-        alert('Failed to send OTP');
+        // Display an error message to the user using Antd message component
+        message.error('Failed to send OTP');
       });
   };
 
